@@ -37,7 +37,7 @@ public class Engine {
     }
 
     public void run() {
-        System.out.println("Benvenuto nel gioco dei Black Friendly.\n Un giocatore impersona un investigatore.\n Durante la partita, dovrai raccogliere informazioni, trovare indizi e seguire diverse piste per risolvere un singolo caso, in particolare un omicidio");
+        System.out.println("Benvenuto nel gioco Murder in the Castle.\n Un giocatore impersona un investigatore.\n Durante la partita, dovrai raccogliere informazioni, trovare indizi e seguire diverse piste per risolvere un singolo caso, in particolare un omicidio");
         System.out.println("Prima di tutto presentiamoci. Con chi abbiamo l'onore di giocare?  ");
         Scanner scanner = new Scanner (System.in);
         String partecipante = scanner.nextLine();
@@ -45,10 +45,10 @@ public class Engine {
         System.out.println("================================================");
         System.out.println("Iniziamo subito!!");
         System.out.println("Detective " + partecipante + " sei stato chiamato per risolvere l'omicidio di un componente della famiglia De Santis\n"
-                + "una delle famiglie più ricche del paese.\nCi troviamo all'interno della loro magnifica villa, costituita da 2 piani.\n"
-                + "In particolare è stato assassinato il figlio minore, Jacob. \n"
+                + "una delle famiglie più ricche del paese.\nCi troviamo all'interno del loro magnifico castello, costituito da 2 piani.\n"
+                + "La vicenda inizia con il ritrovamento del cadavere del giovane Jacob all'interno della sua camera.\nSulla scena del crimine non c'è neanche l'arma del delitto.\n"
                 + "Attualmente e al momento dell'omicidio c'erano solo i 4 componenti della famiglia: la signora Maria, il signor Dylan, la figlia maggiore Filomena e il figlio minore Jacob.\n"
-                + "Mettiti subito all'opera!. \nRicorda, digitando help, ti mostreremo tutti i comandi possibili.");
+                + "Mettiti subito all'opera!. Dovrai trovare l'arma del delitto e chi lo ha ucciso.\nRicorda, digitando help, ti mostreremo tutti i comandi possibili.");
         //System.out.println("Parte della casa" + game.getCurrentRoom().getName());
         System.out.println("================================================");
         System.out.println(game.getCurrentRoom().getDescription());

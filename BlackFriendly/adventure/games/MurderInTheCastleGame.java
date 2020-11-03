@@ -64,38 +64,38 @@ public class MurderInTheCastleGame extends GameDescription {
         open.setAlias(new String[]{"Apri"});
         getCommands().add(open);
         Command push = new Command(CommandType.PUSH, "premi");
-        push.setAlias(new String[]{"spingi", "attiva", "push","Premi","Spingi","Attiva"});
+        push.setAlias(new String[]{"spingi", "attiva", "push","Premi","Spingi","Attiva","riponi","Riponi"});
         getCommands().add(push);
         Command help =new Command(CommandType.HELP, "aiuto");
         getCommands().add(help);
         help.setAlias(new String[]{"Aiuto","Help","help"});
         //Rooms 1st floor
-        Room salone = new Room(0, "Salone", "Ti trovi nel salone,uno dei luoghi più frequentati della casa. \n Ci mettiamo sul divano o iniziamo a cercare? Buon Divertimento!\n"
+        Room salone = new Room(0, "Salone", "Ti trovi nel salone,uno dei luoghi più frequentati della casa."
                 + "Vuoi osservare il salone o procedere in un'altra stanza?");
-        salone.setLook("Sei nel salone,a est trovi la cucina, a nord trovi le scale per il piano superiore, a ovest trovi la sala da pranzo, a sud la porta d'ingresso, dove saranno gli indizi?");
-        Room salaDaPranzo = new Room(1, "Sala da pranzo", "Ti trovi nella sala da pranzo del castello. Ci sono preziosi ovunque, ma nessun indizio rilevante.");
-        salaDaPranzo.setLook("Non ci sono indizi rilevanti, meglio cambiare stanza!");
-        Room bagno = new Room(2, "Bagno", "Ti trovi nel bagno del castello. Posto insolito per commettere un omicidio!  "
-                + "C'è una grande finiestra ed una vasca da bagno lussuosa, il marmo splende come non ha mai sple-, spl- ... come mai prima d'ora!");
-        bagno.setLook("Non ci sono indizi rilevanti, meglio cambiare stanza!");
-        Room cucina = new Room(3, "Cucina", "Sei nella cucina del castello. Uno dei luoghi più frequentati in tutte le ore del giorno.");
-        cucina.setLook("C'è un cestino accanto al lavandino.Ricorda: Un cestino, nei film contiene sempre un indizio!");
+        salone.setLook("Come in tutti i saloni, ci sono una serie di divani, un enorme tappeto al centro e una parete attrezzata con una tv 60''. In un angolo c'è un tavolino con sopra degli alcolici.\n A est trovi la cucina, a nord trovi le scale per il piano superiore, a ovest trovi la sala da pranzo, a sud la porta d'ingresso.\nVuoi riposarti sul divano o inizi a cercare? Buon Divertimento!");
+        Room salaDaPranzo = new Room(1, "Sala da pranzo", "Ti trovi nella sala da pranzo del castello.\n Vuoi accomodarti e aspettare che qualcuno ti porti del cibo? Ma non pensarci proprio! L'assassino potrebbe uccidere ancora!");
+        salaDaPranzo.setLook("Un imponente tavolo rettangolare al centro della stanza, con 4 sedie. Un lampadario stile barocco che pende dal soffitto. Attorno  vari mobili color legno.\nSembra essere tutto perfettamente al posto, cerca altrove!\n A nord c'è il bagno");
+        Room bagno = new Room(2, "Bagno", "Sei nel bagno del castello.\n Digitando osserva potrai immaginare un bagno mai visto prima d'ora!");
+        bagno.setLook("C'è una grande finiestra ed una vasca da bagno lussuosa, il marmo splende come non ha mai sple-, spl- ... come mai prima d'ora!\n Un lavandino con sopra un enorme specchio tutto color oro, peccato non si possa prendere...\n C'è un mobiletto. Aprilo se pensi ci possa essere qualche indizio all'interno"); 
+        Room cucina = new Room(3, "Cucina", "Sei nella cucina del castello. Uno dei luoghi più frequentati in tutte le ore del giorno. A chi non piace mangiare alla fine?...Guardati attorno");
+        cucina.setLook("La cucina è costituita da una serie di pensili, un piano da lavoro con lavabo e piano cottura. \nC'è un set di coltelli accanto al piano cottura, ma non sembra mancanrne qualcuno.\nInoltre piccolo tavolo dove pranzano gli inservienti.\nC'è un cestino accanto al lavandino.\nRicorda: Un cestino, nei film contiene sempre un indizio!");
         //Rooms 2nd floor
-        Room corridoio = new Room(4, "Corridio", "Sei salito al piano superiore e ti trovi nel corridoio del castello. Ci sono diverse stanze collegate tra loro.");
-        corridoio.setLook("Non ci sono indizi rilevanti, meglio cambiare stanza!");
-        Room stanzaJacob = new Room(5, "Stanza di Jacob, figlio dei ____", "Ti trovi nella stanza di Jacob. A sinistra scorgi la stanza di sua sorella Andrea. \n A nord trovi il bagno che cumnica a sua volta con la camera dei genitori.");
-        stanzaJacob.setLook("Noti che ci sono dei fili per terra ed un cellulare sul mobile.");
-        Room stanzaAndrea = new Room(6, "Stanza di Andrea", "Ti trovi nella stanza di Andrea, sorrela di Jacob. \n Questa stanza comunica unicamente con la stanza di Jacob.");
-        stanzaAndrea.setLook("Non ci sono indizi rilevanti, meglio cambiare stanza!");
+        Room corridoio = new Room(4, "Corridoio", "Sei salito al piano superiore e ti trovi nel corridoio del castello. Ci sono diverse stanze collegate tra loro.");
+        corridoio.setLook("Un piccolo quadrato con 3 direzioni possibili: nord Stanza dei genitori, est Sala lettura, ovest scena del crimine.\nQuale sarà la prossima mossa?");
+        Room stanzaJacob = new Room(5, "Stanza di Jacob", "Ti trovi nella stanza di Jacob, ovvero la scena del crimine. Il cadavere del giovane è stato portato via, ma puoi solamente sapere che aveva una ferita profonda al collo.");
+        stanzaJacob.setLook("Al centro della stanza, un letto tutto ricoperto di sangue. C'è un cellulare sulla scrivania ...\nAspetta aspetta: ci sono dei fili per terra... Vorranno dirti qualcosa?Che ne dici di prenderli?\nA sinistra si trova la stanza di sua sorella Filomena.\nA nord trovi il bagno.");
+        Room stanzaFilomena = new Room(6, "Stanza di Filomena", "Ti trovi nella stanza di Filomena, sorrela di Jacob. \n La solita stanza da 'femmine' con colore predominante il rosa. ");
+        stanzaFilomena.setLook("Un letto con coperte e cuscini rosa, un armadio bianco con attaccate delle immagini di alcuni attori.\n Sulla scrivania ci sono dei libri... Sarà una ragazza studiosa! Però c'è anche una rivista sul cucito...mmm");
         Room secondoBagno = new Room(7, "Secondo Bagno", "Ti trovi nel secondo bagno del castello. Ti pareva che un castello avesse solo un bagno?");
-        secondoBagno.setLook("Non ci sono indizi rilevanti, meglio cambiare stanza!");
-        Room stanzaGenitori = new Room(8, "Stanza dei Genitori", "Ti trovi nella stanza dei genitori. La stanza è molto vasta, prova a cercare qualcosa!");
-        stanzaGenitori.setLook("C'è una cabina-armadio che non passa affatto inosservata, c'è qualcosa di sospetto!");
+        secondoBagno.setLook("E' molto meglio l'altro, anzi molto meglio quello di casa tua.. E' un modo per farti sentire ricco ed importante.\nNon ci sono indizi rilevanti, meglio cambiare stanza! A est trovi la stanza dei genirori");
+        Room stanzaGenitori = new Room(8, "Stanza dei Genitori", "Ti trovi nella stanza dei genitori. La stanza è molto grande, prova a cercare qualcosa!");
+        stanzaGenitori.setLook("Un letto a baldacchino al centro, con 2 comodini a destra e sinistra.\nDi fronte c'è una cabina-armadio che non passa affatto inosservata, c'è qualcosa di sospetto!");
         Room salaLettura = new Room(9, "Sala Lettura", "Ti trovi nella sala lettura del castello. Ci sono tomi di ogni genere, che ne diresti di leggere un libro?");
-        salaLettura.setLook("C'è un libro leggermente sporgente in cima alla libbreria.");
-        Room stanzaSegreta = new Room(10, "Stanza Segreta", "Hai trovato una stanza segreta. "); //INSERISCI FRASE AD EFFETTO
-        stanzaSegreta.setLook("C'è una gonna con delle iniziali 'M' & 'D'");   //SUSCIETTIBILE  A MODIFICHE
-        
+        salaLettura.setLook("Ma è il castello dei tavoli enormi? Un altro tavolo immenso fatto di legno massiccio, con attorno milioni di libri catalogati in diversi scaffali...\nFai attenzione! C'è categoria 'cucito'.  Qualcuno sarà veramente appassionato!\n Attento che un libro sporge, rimettilo bene prima che cada.");
+        salaLettura.setVisible(false);
+        Room stanzaSegreta = new Room(10, "Stanza Segreta", "Non basta l'immensità del castello e il mistero che s'infittisce... Anche la stanza segreta!"); //INSERISCI FRASE AD EFFETTO
+        stanzaSegreta.setLook("Una stanza dall'aspetto abbastanza macabro, con una misera luce...\nMa.. ma.. c'è una gonna con delle iniziali 'M' & 'D' ed è pure sporca di sangue. Non sarà mica la gonna che mancava al tailleur?\nPrendila e inizia a ricomporre i pezzi!");  
+        stanzaSegreta.setVisible(false);
         //maps 1st floor
         bagno.setSouth(salaDaPranzo);
         salaDaPranzo.setNorth(bagno);
@@ -115,8 +115,8 @@ public class MurderInTheCastleGame extends GameDescription {
         secondoBagno.setEast(stanzaGenitori);
         stanzaJacob.setEast(corridoio);
         stanzaJacob.setNorth(secondoBagno);
-        stanzaJacob.setWest(stanzaAndrea);
-        stanzaAndrea.setEast(stanzaJacob);
+        stanzaJacob.setWest(stanzaFilomena);
+        stanzaFilomena.setEast(stanzaJacob);
         salaLettura.setWest(corridoio);
         salaLettura.setEast(stanzaSegreta); // non accessibile senza interazione
         stanzaSegreta.setWest(salaLettura);
@@ -127,11 +127,13 @@ public class MurderInTheCastleGame extends GameDescription {
         getRooms().add(salone);
         getRooms().add(cucina);
         getRooms().add(stanzaGenitori);
+        getRooms().add(stanzaSegreta);
+        getRooms().add(salaLettura);
         //obejcts
-        AdvObject forbici = new AdvObject(1, "forbici da cucito", "Delle forbici da cucito macchiate di sangue.");
+        AdvObject forbici = new AdvObject(1, "forbici da cucito", "Delle forbici da cucito macchiate di sangue.Sarà forse l'arma del delitto...");
         forbici.setAlias(new String[]{"forbici", "forbice", "Forbici", "Forbice", "FORBICI", "FORBICE"});
         cucina.getObjects().add(forbici);
-        AdvObjectContainer cestino = new AdvObjectContainer(2, "cestino","Ci sono un mucchio di schifezze, ma c'è un fazzoletto con un aspetto sospetto\n");
+        AdvObjectContainer cestino = new AdvObjectContainer(2, "cestino","Ci sono un mucchio di schifezze, ma c'è un fazzoletto con un aspetto sospetto");
         cestino.setAlias(new String[]{"spazzatura", "immondizia"});
         cestino.setOpenable(true);
         cestino.setPickupable(false);
@@ -146,21 +148,16 @@ public class MurderInTheCastleGame extends GameDescription {
         AdvObject fili = new AdvObject(3, "fili da cucito", "Dei fili da cucito, un probabile indizio.");
         fili.setAlias(new String[]{"filo", "Filo", "fili", "Fili"});
         stanzaJacob.getObjects().add(fili);
-        AdvObject cellulare = new AdvObject(4, "cellulare di Jacob", "Il cellulare della vittima, ci sono numerose chiamate perse della madre.");
+        AdvObject cellulare = new AdvObject(4, "cellulare di Jacob", "Il cellulare della vittima, ci sono numerose chiamate perse della madre.\nSo che stai pensando: 'Cosa c'è di strano', ma pensaci...");
         cellulare.setAlias(new String[]{"telefono", "telefonino", "smartphone", "cellulare", "Telefono", "Cellulare", "Telefonino"});
         stanzaJacob.getObjects().add(cellulare);
-        AdvObject libro = new AdvObject(5, "Libro sporgente", "Un libro particolarmente grande, non sembra removibile, prova a schiacciarlo!");
+        AdvObject libro = new AdvObject(5, "Libro sporgente", "Un libro particolarmente grande, con scritto 'Impara a cucire con java', mettilo al posto va'... ");
         libro.setAlias(new String[]{"Libro", "libri", "libro"});
         libro.setPushable(true);
         libro.setPush(false);
         salaLettura.getObjects().add(libro);
         
-        /*AdvObjectContainer stanzaSegreta = new AdvObjectContainer(10, "stanza");
-        stanzaSegreta.setAlias(new String[]{"stanza", "stanza"});
-        stanzaSegreta.setOpenable(true);
-        stanzaSegreta.setPickupable(false);
-        stanzaSegreta.setOpen(false);  //è inizializzato a falso*/
-        //salaLettura.getObjects().add(stanzaSegreta);
+        //AGGIUNGERE MOBILE BAGNO
         AdvObject gonna = new AdvObject(7, "Una gonna", "Una gonna con le iniziali 'M' & 'D', completamente sporca di sangue");
         gonna.setAlias(new String[]{"Gonna","gonna"});
         stanzaSegreta.getObjects().add(gonna);
@@ -168,8 +165,8 @@ public class MurderInTheCastleGame extends GameDescription {
         
         cestino.add(fazzoletto);
         fazzoletto.add(forbici);//cestino è un oggetto che contiene un altro oggetto
-        AdvObjectContainer armadio = new AdvObjectContainer(8, "armadio","Ci sono tutti i vestiti costosissimi dei padroni di casa...\nMa c'è un tailleur senza gonna\n");
-        armadio.setAlias(new String[]{"Armadio", "mobile"});
+        AdvObjectContainer armadio = new AdvObjectContainer(8, "armadio","Ci sono tutti i vestiti costosissimi dei padroni di casa...\nMa c'è un tailleur senza gonna.");
+        armadio.setAlias(new String[]{"Armadio", "mobile","cabina-armadio"});
         armadio.setOpenable(true);
         armadio.setPickupable(false);
         armadio.setOpen(false);  //è inizializzato a falso
@@ -211,8 +208,12 @@ public class MurderInTheCastleGame extends GameDescription {
                     }   break;
                 case EAST:
                     if (getCurrentRoom().getEast() != null) {
+                        if  (getCurrentRoom().isVisible()){
                         setCurrentRoom(getCurrentRoom().getEast());
-                            move = true;     
+                        move = true;
+                        }
+                        else 
+                           System.out.println("Da quella parte non puoi andarci c'è un muro!");  
                     } else {
                         noroom = true;
                     }   break;
@@ -226,16 +227,13 @@ public class MurderInTheCastleGame extends GameDescription {
                 case INVENTORY:
                     out.println(("Nel tuo inventario ci sono "+ contaOggetti + " oggetti"));
                     getInventory().forEach(o -> {
-                        out.println(o.getName()+ ": "+ o.getDescription());
+                        out.println("- "+ o.getName());
                     });
                             break;
                 case LOOK_AT:
                     
                     if (getCurrentRoom().getLook() != null) {
                         out.println(getCurrentRoom().getLook());
-                        /*if(p.getObject() != null){
-                            out.println("Descrizione:" + p.getObject().getLook());
-                        }*/ // serve per osservare gli ooggetti
                         
                     } else {
                         out.println("Non c'è niente di interessante qui.");
@@ -262,19 +260,19 @@ public class MurderInTheCastleGame extends GameDescription {
                                 case "SI":
                                     System.out.println("Inserisci il nome:");
                                     String nameKiller = scan.next();
-                                    if (nameKiller.equals("madre")||nameKiller.equals("signora")||nameKiller.equals("Madre")) {
+                                    if (nameKiller.equals("madre")||nameKiller.equals("signora")||nameKiller.equals("Maria") || nameKiller.equals("maria")) {
                                         win(out);
                      
                                     } else {
                                          out.println("Risposta Sbagliata!");
-                                          if (contaOggetti == 2) {
+                                          if (contaOggetti == 10) {
                                             lose(out);
                                         }
                                     }       break;
                                 case "no":
                                 case "No":
                                 case "NO":
-                                    if (contaOggetti == 2) {
+                                    if (contaOggetti == 10) {
                                         lose(out); 
                                     } 
                                     else
@@ -286,8 +284,8 @@ public class MurderInTheCastleGame extends GameDescription {
                                     System.out.println("Sei un po' confuso");
                                     break;
                             }
-                       
-                        out.println("ti trovi in " + getCurrentRoom().getName());
+                        out.println("================================================");   
+                        out.println("Posizione attuale: " + getCurrentRoom().getName());
 
                     }
              else {
@@ -300,6 +298,7 @@ public class MurderInTheCastleGame extends GameDescription {
                     * non rendere più disponibili gli oggetti contenuti rimuovendoli dalla stanza o dall'invetario.
                     * Trovare altra soluzione.
                     */
+                    AdvObjectContainer c = (AdvObjectContainer) p.getObject();
                     if (p.getObject() == null && p.getInvObject() == null) {
                         out.println("Non c'è niente da aprire qui.");
                     } else {
@@ -307,7 +306,7 @@ public class MurderInTheCastleGame extends GameDescription {
                             if (p.getObject().isOpenable() && p.getObject().isOpen() == false) {
                                 if (p.getObject() instanceof AdvObjectContainer) {
                                     out.println("Hai aperto: " + p.getObject().getDescription());
-                                    AdvObjectContainer c = (AdvObjectContainer) p.getObject();
+                                    //AdvObjectContainer c = (AdvObjectContainer) p.getObject();
                                     if (!c.getList().isEmpty()) {
                                         out.print(c.getName() + " contiene: " );
                                         Iterator<AdvObject> it = c.getList().iterator();
@@ -316,6 +315,7 @@ public class MurderInTheCastleGame extends GameDescription {
                                             getCurrentRoom().getObjects().add(next);
                                             out.print(" " + next.getDescription()); //meglio la descrizione con il nome 
                                             it.remove();
+                                            
                                         }
                                         out.println();
                                     }
@@ -323,14 +323,16 @@ public class MurderInTheCastleGame extends GameDescription {
                                     out.println("Hai aperto: " + p.getObject().getName());
                                     p.getObject().setOpen(true);
                                 }
+                                c.setOpenable(false);
                             } else {
                                 out.println("Non puoi aprire questo oggetto.");
                             }
                         }
+                        
                         if (p.getInvObject() != null) {
                             if (p.getInvObject().isOpenable() && p.getInvObject().isOpen() == false) {
                                 if (p.getInvObject() instanceof AdvObjectContainer) {
-                                    AdvObjectContainer c = (AdvObjectContainer) p.getInvObject();
+                                    //AdvObjectContainer c = (AdvObjectContainer) p.getInvObject();
                                     if (!c.getList().isEmpty()) {
                                         out.print(c.getName() + " contiene: " );
                                         Iterator<AdvObject> it = c.getList().iterator();
@@ -352,18 +354,16 @@ public class MurderInTheCastleGame extends GameDescription {
                         }
                     }   break;
                 case PUSH:
-                    /*if (getCurrentRoom().getId() == 9 ) {
-                            out.println("ciao."); //quando siamo nella stanza ce lo dice, può essere utile per la stanza segreta
-                         */
                     //ricerca oggetti pushabili
                     if (p.getObject() != null && p.getObject().isPushable()) {
                         out.println("Hai premuto: " + p.getObject().getName());
                         if (p.getObject().getId() == 5 && getCurrentRoom().getId() == 9) {
                             secret(out);
                             System.out.println("Chissà cosa sarà nascosto dentro...\n Che ne dici di entrare?\n La camera si trova a destra");
-                            /*setCurrentRoom(getCurrentRoom().getEast());
-                            move = true; 
-                            System.out.println("FINALMENTE");*/ //possiamo decidere se muoverlo direttamente, oppure dicendo la direzione della camera
+                            getCurrentRoom().setVisible(true); //nel caso l'utente volesse andarci autonomamente
+                            //setCurrentRoom(getCurrentRoom().getEast());
+                            //move = true; 
+                            //System.out.println("FINALMENTE"); //possiamo decidere se muoverlo direttamente, oppure dicendo la direzione della camera
                         }
                     } else if (p.getInvObject() != null && p.getInvObject().isPushable()) {
                         out.println("Hai premuto: " + p.getInvObject().getName());
@@ -389,17 +389,17 @@ public class MurderInTheCastleGame extends GameDescription {
                     break;
             }
             if (noroom) {
-                out.println("Da quella parte non si può andare c'è un muro!");
+                out.println("Da quella parte non puoi andarci c'è un muro!");
             } else if (move) {
-                out.println(getCurrentRoom().getName());
-                out.println("================================================");
-                out.println(getCurrentRoom().getDescription());
+                out.println("Posizione attuale: "+getCurrentRoom().getName()+ " \n"+getCurrentRoom().getDescription());
+                //out.println("================================================");
+                //out.println(getCurrentRoom().getDescription());
             }
         }
     }
 
     private void secret(PrintStream out) {  //apertura stanza segreta
-        out.println("*crick* Si apre una porta per una stanza segreta.."); //ma non sappiamo in che direzione sia la porta 
+        out.println("*crick* Si apre una porta per una stanza segreta.."); 
 
     }
 
