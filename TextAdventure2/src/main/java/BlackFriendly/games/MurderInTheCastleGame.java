@@ -5,6 +5,7 @@
  */
 package BlackFriendly.games;
 
+import BlackFriendly.adventure.Art;
 import BlackFriendly.adventure.GameDescription;
 import BlackFriendly.parser.ParserOutput;
 import BlackFriendly.type.AdvObject;
@@ -17,12 +18,14 @@ import java.util.Iterator;
 
 /**
  *
- * 
+ *
  * @author Rigante Chiara
  * @author Ramkalawon Alessia
  * @author Scalzo Andrea
  */
 public class MurderInTheCastleGame extends GameDescription {
+
+    Art art = new Art();
 
     @Override
     public void init() throws Exception {
@@ -60,6 +63,9 @@ public class MurderInTheCastleGame extends GameDescription {
         Command help = new Command(CommandType.HELP, "aiuto");
         getCommands().add(help);
         help.setAlias(new String[]{"Aiuto", "Help", "help"});
+        Command map = new Command(CommandType.MAP, "mappa");
+        map.setAlias(new String[]{"map", "Map", "Mappa"});
+        getCommands().add(map);
         //Rooms 1st floor
         Room salone = new Room(0, "Salone", "Ti trovi nel salone,uno dei luoghi più frequentati della casa."
                 + "Vuoi osservare il salone o procedere in un'altra stanza?");
@@ -67,7 +73,7 @@ public class MurderInTheCastleGame extends GameDescription {
         Room salaDaPranzo = new Room(1, "Sala da pranzo", "Ti trovi nella sala da pranzo del castello.\n Vuoi accomodarti e aspettare che qualcuno ti porti del cibo? Ma non pensarci proprio! L'assassino potrebbe uccidere ancora!");
         salaDaPranzo.setLook("Un imponente tavolo rettangolare al centro della stanza, con 4 sedie. Un lampadario stile barocco che pende dal soffitto. Attorno  vari mobili color legno.\nSembra essere tutto perfettamente al posto, cerca altrove!\n A nord c'è il bagno");
         Room bagno = new Room(2, "Bagno", "Sei nel bagno del castello.\n Digitando osserva potrai immaginare un bagno mai visto prima d'ora!");
-        bagno.setLook("C'è una grande finiestra ed una vasca da bagno lussuosa, il marmo splende come non ha mai sple-, spl- ... come mai prima d'ora!\n Un lavandino con sopra un enorme specchio tutto color oro, peccato non si possa prendere...\n C'è un mobiletto. Aprilo se pensi ci possa essere qualche indizio all'interno");
+        bagno.setLook("C'è una grande finiestra ed una vasca da bagno lussuosa, il marmo splende come non ha mai sple-, spl- ... come mai prima d'ora!\n Un lavandino con sopra un enorme specchio tutto color oro, peccato non si possa prendere...\n");
         Room cucina = new Room(3, "Cucina", "Sei nella cucina del castello. Uno dei luoghi più frequentati in tutte le ore del giorno. A chi non piace mangiare alla fine?...Guardati attorno");
         cucina.setLook("La cucina è costituita da una serie di pensili, un piano da lavoro con lavabo e piano cottura. \nC'è un set di coltelli accanto al piano cottura, ma non sembra mancanrne qualcuno.\nInoltre piccolo tavolo dove pranzano gli inservienti.\nC'è un cestino accanto al lavandino.\nRicorda: Un cestino, nei film contiene sempre un indizio!");
         //Rooms 2nd floor
@@ -95,7 +101,7 @@ public class MurderInTheCastleGame extends GameDescription {
         salone.setWest(salaDaPranzo);
         salone.setNorth(corridoio);
         cucina.setWest(salone);
-        
+
         //maps 2nd floor
         corridoio.setEast(salaLettura);
         corridoio.setWest(stanzaJacob);
@@ -110,9 +116,9 @@ public class MurderInTheCastleGame extends GameDescription {
         stanzaJacob.setWest(stanzaFilomena);
         stanzaFilomena.setEast(stanzaJacob);
         salaLettura.setWest(corridoio);
-        salaLettura.setEast(stanzaSegreta); 
+        salaLettura.setEast(stanzaSegreta);
         stanzaSegreta.setWest(salaLettura);
-       
+
         getRooms().add(bagno);
         getRooms().add(salaDaPranzo);
         getRooms().add(salone);
@@ -238,7 +244,14 @@ public class MurderInTheCastleGame extends GameDescription {
                     case LOOK_AT:
 
                         if (getCurrentRoom().getLook() != null) {
+
                             out.println(getCurrentRoom().getLook());
+                            //         if (p.getObject() != null){
+                            //             if (p.getObject().getId() == 6)
+                            if (getCurrentRoom().getId() == 9) {
+                                art.writeBook();
+                            }
+                            //            }
 
                         } else {
                             out.println("Non c'è niente di interessante qui.");
@@ -250,6 +263,12 @@ public class MurderInTheCastleGame extends GameDescription {
                                 getInventory().add(p.getObject());
                                 getCurrentRoom().getObjects().remove(p.getObject());
                                 out.println("Hai raccolto: " + p.getObject().getDescription());
+                                    if (p.getObject().getId() == 1) {
+                                        art.writeScisors();
+                                    }
+                                    else if (p.getObject().getId() == 5){
+                                        art.writeMobile();
+                                    }
                                 contaOggetti++;
                                 p.getObject().setPickupable(false);//oggetto non più raccoglibile
                                 System.out.println(contaOggetti);
@@ -300,7 +319,7 @@ public class MurderInTheCastleGame extends GameDescription {
                         }
                         break;
                     case OPEN:
-                        
+
                         if (p.getObject() == null && p.getInvObject() == null) {
                             out.println("Non c'è niente da aprire qui.");
                         } else {
@@ -312,31 +331,28 @@ public class MurderInTheCastleGame extends GameDescription {
                                             out.println("Hai aperto: " + p.getObject().getDescription());
                                             Iterator<AdvObject> it = c.getList().iterator();
                                             while (it.hasNext()) {
-                                               AdvObject oggetto = it.next(); 
+                                                AdvObject oggetto = it.next();
                                                 getCurrentRoom().getObjects().add(oggetto);
-                                                if(oggetto.isPickupable()== false){ //se l'ggetto è stato pickato puoi rimuoverlo
+                                                if (oggetto.isPickupable() == false) { //se l'ggetto è stato pickato puoi rimuoverlo
                                                     it.remove();
                                                     getCurrentRoom().getObjects().remove(oggetto);
-                                                    System.out.println(p.getObject().getName()+ " non ha nulla di raccoglibile\n Hai già raccolto tutto");
+                                                    System.out.println(p.getObject().getName() + " non ha nulla di raccoglibile\n Hai già raccolto tutto");
                                                     p.getObject().setOpenable(false);
-                                                }
-                                                else if (oggetto.isPickupable() ==true){
+                                                } else if (oggetto.isPickupable() == true) {
                                                     out.print(c.getName() + " contiene: ");
-                                                    out.print(" " + oggetto.getDescription()+" ");
-                                                    System.out.println("\nOggetto raccoglibile: "+ oggetto.getName());
-                                                    
+                                                    out.print(" " + oggetto.getDescription() + " ");
+                                                    System.out.println("\nOggetto raccoglibile: " + oggetto.getName());
+
                                                 }
-                                                }
+                                            }
                                             out.println();
                                         }
-                                        } 
-                                     else {
+                                    } else {
                                         out.println("Hai aperto: " + p.getObject().getName());
                                         p.getObject().setOpen(true);
                                     }
-                                }
-                                else {
-                                    out.println("Non puoi aprire questo oggetto."); 
+                                } else {
+                                    out.println("Non puoi aprire questo oggetto.");
                                 }
                             }
 
@@ -374,14 +390,16 @@ public class MurderInTheCastleGame extends GameDescription {
                                 System.out.println("Chissà cosa sarà nascosto dentro...\n Che ne dici di entrare?\n La camera si trova a destra");
                                 getCurrentRoom().setVisible(true); //nel caso l'utente volesse andarci autonomamente
                             }
-                        } 
-                        else if (p.getInvObject() != null && p.getInvObject().isPushable()) {
+                        } else if (p.getInvObject() != null && p.getInvObject().isPushable()) {
                             out.println("Hai premuto: " + p.getInvObject().getName());
 
-                        } 
-                        else {
+                        } else {
                             out.println("Non ci sono oggetti che puoi premere qui.");
                         }
+                        break;
+                    case MAP:
+                        art.writeMap();
+                        out.println("Posizione attuale: " + getCurrentRoom().getName());
                         break;
                     case HELP:
                         //se il giocatore non sa cosa può fare
@@ -390,6 +408,7 @@ public class MurderInTheCastleGame extends GameDescription {
                                 + "Prendi\n"
                                 + "Apri\n"
                                 + "Premi\n"
+                                + "Mappa\n"
                                 + "Esci\n"
                                 + "Inventario");
 

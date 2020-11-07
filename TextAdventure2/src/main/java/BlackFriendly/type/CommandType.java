@@ -12,5 +12,5 @@ package BlackFriendly.type;
  * @author Scalzo Andrea
  */
 public enum CommandType {
-    END, INVENTORY, NORD, SOUTH, EAST, WEST, OPEN, CLOSE, PUSH, PULL, PICK_UP, GIVE, USE, LOOK_AT,HELP
+    END, INVENTORY, NORD, SOUTH, EAST, WEST, OPEN, CLOSE, PUSH, PULL, PICK_UP, GIVE, USE, LOOK_AT, HELP, MAP
 }

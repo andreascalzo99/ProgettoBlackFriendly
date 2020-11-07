@@ -11,6 +11,7 @@ import BlackFriendly.parser.ParserOutput;
 import BlackFriendly.type.CommandType;
 import java.util.Scanner;
 
+
 /**
  * ATTENZIONE: l'Engine è molto spartano, in realtà demanda la logica alla
  * classe che implementa GameDescription e si occupa di gestire I/O sul
@@ -37,13 +38,14 @@ public class Engine {
     }
 
     public void run() {
+        
         System.out.println("Benvenuto nel gioco Murder in the Castle.\n Un giocatore impersona un investigatore.\n Durante la partita, dovrai raccogliere informazioni, trovare indizi e seguire diverse piste per risolvere un singolo caso, in particolare un omicidio");
         System.out.println("Prima di tutto presentiamoci. Con chi abbiamo l'onore di giocare?  ");
         Scanner scanner = new Scanner (System.in);
         String partecipante = scanner.nextLine();
         System.out.println("Molto piacere " + partecipante);
         System.out.println("================================================");
-        System.out.println("Iniziamo subito!!");
+        System.out.println("Iniziamo subito!!"); 
         System.out.println("Detective " + partecipante + " sei stato chiamato per risolvere l'omicidio di un componente della famiglia De Santis\n"
                 + "una delle famiglie più ricche del paese.\nCi troviamo all'interno del loro magnifico castello, costituito da 2 piani.\n"
                 + "La vicenda inizia con il ritrovamento del cadavere del giovane Jacob all'interno della sua camera.\nSulla scena del crimine non c'è neanche l'arma del delitto.\n"
@@ -70,7 +72,10 @@ public class Engine {
      */
     public static void main(String[] args) {
         Engine engine = new Engine(new MurderInTheCastleGame());
+        Art art = new Art();
+        art.writeCastle();
         engine.run();
+
     }
 
 }
