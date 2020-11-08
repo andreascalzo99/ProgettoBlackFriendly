@@ -10,10 +10,14 @@ import BlackFriendly.type.Command;
 import java.util.List;
 
 /**
- *
+ * Il parser si occupa di determinare la struttura e la correttezza dell’input analizzando i comandi e i potenziali oggetti inseriti nella frase eliminando le informazioni superflue.<br>
+ * E' implementato in modo indipendete dalla lingua, in quanto implementato per riconoscere frasi semplici senza l'utilizzo di articoli o preposizioni.<br>
+ * Verifica la correttezza dell'input inserito dall'utente, costuituito da uno o più parole, riferendosi ad un comando, oppure comando e oggetto.
+ * 
  * @author Rigante Chiara
  * @author Ramkalawon Alessia
  * @author Scalzo Andrea
+ * 
  */
 public class Parser {
 
@@ -35,12 +39,6 @@ public class Parser {
         return -1;
     }
 
-    /* ATTENZIONE: il parser è implementato in modo abbastanza independete dalla lingua mi riconosce solo 
-    * frasi semplici del tipo <azione> <oggetto> <oggetto> non permette di utilizzare articoli o preposizioni.
-    * L'utilizzo di articoli o preporsizioni lo renderebbero dipendente dalla lingua, o meglio bisognerebbe
-    * realizzare un parser per ogni lingua, prevedendo un'iterfaccia/classe astratta Perser e diverse
-    * implementazioni per ogni lingua.
-    */
     public ParserOutput parse(String command, List<Command> commands, List<AdvObject> objects, List<AdvObject> inventory) {
         String cmd = command.toLowerCase().trim();
         String[] tokens = cmd.split("\\s+");

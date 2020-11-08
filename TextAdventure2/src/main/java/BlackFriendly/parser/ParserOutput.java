@@ -9,7 +9,8 @@ import BlackFriendly.type.AdvObject;
 import BlackFriendly.type.Command;
 
 /**
- *
+ * Il parserOutput è implementato per gestire una struttura dati che contiene i dati dell’input utente tokenizzati e strutturati.
+ * 
  * @author Rigante Chiara
  * @author Ramkalawon Alessia
  * @author Scalzo Andrea

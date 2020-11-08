@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
+ * GameDescription contiene le entità del gioco
  * @author Rigante Chiara
  * @author Ramkalawon Alessia
  * @author Scalzo Andrea

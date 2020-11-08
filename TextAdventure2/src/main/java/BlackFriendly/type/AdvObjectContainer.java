@@ -10,7 +10,8 @@ import java.util.List;
 import java.util.Set;
 
 /**
- *
+ * La classe AdvObject Container estende la classe AdvObject, in quanto questi oggetti hanno la possibilità di contenere altri oggetti della classe AdvObject.<br>
+ * Ha come attributi nome,descrizione,alias e possibilità di essere aperto.
  * @author Rigante Chiara
  * @author Ramkalawon Alessia
  * @author Scalzo Andrea

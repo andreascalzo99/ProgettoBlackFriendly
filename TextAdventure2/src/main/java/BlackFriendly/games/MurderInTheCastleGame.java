@@ -17,8 +17,9 @@ import java.io.PrintStream;
 import java.util.Iterator;
 
 /**
- *
- *
+ * Murder in the Castle contiene contiene l'implementazione dei comandi e delle direzioni possibili all'utente.<br>
+ * E' la classe che implementa la logica di gioco e come interagiscono i comandi dell'utente con il gioco.<br>
+ * Estende la classe GameDescription e ne implementa i suoi metodi astratti.
  * @author Rigante Chiara
  * @author Ramkalawon Alessia
  * @author Scalzo Andrea
@@ -246,12 +247,9 @@ public class MurderInTheCastleGame extends GameDescription {
                         if (getCurrentRoom().getLook() != null) {
 
                             out.println(getCurrentRoom().getLook());
-                            //         if (p.getObject() != null){
-                            //             if (p.getObject().getId() == 6)
                             if (getCurrentRoom().getId() == 9) {
                                 art.writeBook();
                             }
-                            //            }
 
                         } else {
                             out.println("Non c'è niente di interessante qui.");

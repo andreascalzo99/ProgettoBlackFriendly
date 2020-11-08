@@ -10,7 +10,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- *
+ * Nella classe AdvObject abbiamo gli attributi che costituiscono gli oggetti del gioco: nome,descrizione,alias,indicazioni riguardanti la possibilità di essere raccolto e/o premuto.
+ * 
  * @author Rigante Chiara
  * @author Ramkalawon Alessia
  * @author Scalzo Andrea

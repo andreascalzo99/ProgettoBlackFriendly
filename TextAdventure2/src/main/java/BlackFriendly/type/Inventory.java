@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
+ * Classe Inventory è la classe che contiene la struttura dati di tipo lista,ovvero collezione di oggetti, utilizzata per registare gli oggetti posseduti nell'inventario
  * @author Rigante Chiara
  * @author Ramkalawon Alessia
  * @author Scalzo Andrea

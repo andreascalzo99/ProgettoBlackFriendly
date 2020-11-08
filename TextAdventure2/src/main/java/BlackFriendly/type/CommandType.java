@@ -6,7 +6,7 @@
 package BlackFriendly.type;
 
 /**
- *
+ * CommandType è una classe enumerativa che contiene un numero finito di comandi: rappresentano i comandi che troviamo nel gioco
  * @author Rigante Chiara
  * @author Ramkalawon Alessia
  * @author Scalzo Andrea

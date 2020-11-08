@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
+ * Nella classe Room troviamo gli attributi che costituiscono le stanze del gioco: nome,descrizione,collegamenti possibili con altre stanze,lista di oggetti contenuti all'interno e visibilità della stanza
  * @author Rigante Chiara
  * @author Ramkalawon Alessia
  * @author Scalzo Andrea

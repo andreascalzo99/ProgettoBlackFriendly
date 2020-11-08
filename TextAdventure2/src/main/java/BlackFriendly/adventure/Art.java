@@ -8,20 +8,22 @@ package BlackFriendly.adventure;
 import java.io.PrintStream;
 
 /**
- *
- * @author 39392
+ * In Art sono implementate alcune illustrazioni di oggetti presenti nell'avventura.
+ * @author Rigante Chiara
+ * @author Scalzo Andrea
+ * @author Ramkalawon Alessia
  */
 public class Art {
 
     public void writeCastle() {
 
 System.out.println("                        Murder In The Castle\n"
-                + "                    |>>>                        |>>>\n"
-                + "                    |                           |\n"
-                + "                _  _|_  _                  _   _|\n"
-                + "               | |_| |_| |                | |_| |_| |\n"
-                + "               \\  .     /                 \\ .    . /\n"
-                + "                \\    , /                   \\    . /\n"
+                + "                    |>>>                         |>>>\n"
+                + "                    |                            |\n"
+                + "                _  _|_  _                   _   _|\n"
+                + "               | |_| |_| |                 | |_| |_| |\n"
+                + "               \\  .     /                 \\ .    ./\n"
+                + "                \\    , /                   \\    ./\n"
                 + "                 | .   |_   _   _   _   _   _| ,   |\n"
                 + "                 |    .| |_| |_| |_| |_| |_| |  .  |\n"
                 + "                 | ,   | .    .     .      . |    .|\n"

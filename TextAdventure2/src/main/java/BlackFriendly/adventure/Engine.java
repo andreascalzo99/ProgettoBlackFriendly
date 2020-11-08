@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package BlackFriendly.adventure;
 
 import BlackFriendly.games.MurderInTheCastleGame;
@@ -13,9 +14,9 @@ import java.util.Scanner;
 
 
 /**
- * ATTENZIONE: l'Engine è molto spartano, in realtà demanda la logica alla
- * classe che implementa GameDescription e si occupa di gestire I/O sul
- * terminale.
+ * L'Engine contiene il main e il metodo run che serve a gestire il caricamento dell'entità del gioco.<br>
+ * Contiene un metodo per chiudere il gioco.<br>
+ * Si occupa della gestione delle risposte ai comandi iseriti dall'utente.
  *
  * @author Rigante Chiara
  * @author Scalzo Andrea

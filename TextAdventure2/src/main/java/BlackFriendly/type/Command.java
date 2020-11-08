@@ -11,7 +11,8 @@ import java.util.Objects;
 import java.util.Set;
 
 /**
- *
+ * La classe Command ha come attributi attributi il nome, il tipo di comando e un insieme di alias per eseguirlo utilizzando anche dei sinonimi.<br>
+ * In particolare, in questa classe sono stati implementati anche i metodi equals e hashCode.
  * @author Rigante Chiara
  * @author Ramkalawon Alessia
  * @author Scalzo Andrea
