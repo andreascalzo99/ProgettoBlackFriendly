@@ -1,0 +1,13 @@
+BlackFriendly/type/Inventory.class
+BlackFriendly/type/Command.class
+BlackFriendly/type/CommandType.class
+BlackFriendly/adventure/Art.class
+BlackFriendly/games/MurderInTheCastleGame$1.class
+BlackFriendly/games/MurderInTheCastleGame.class
+BlackFriendly/adventure/GameDescription.class
+BlackFriendly/type/AdvObject.class
+BlackFriendly/parser/ParserOutput.class
+BlackFriendly/parser/Parser.class
+BlackFriendly/type/AdvObjectContainer.class
+BlackFriendly/type/Room.class
+BlackFriendly/adventure/Engine.class

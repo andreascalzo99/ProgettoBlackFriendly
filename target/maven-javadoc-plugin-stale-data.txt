@@ -1,0 +1,62 @@
+/Library/Java/JavaVirtualMachines/jdk-11.0.1.jdk/Contents/Home/bin/javadoc
+@options
+@packages
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'/Users/chiararigante/Downloads/ProgettoBlackFriendly/TextAdventure2/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2020. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/Users/chiararigante/Downloads/ProgettoBlackFriendly/TextAdventure2/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'Murder In The Castle 1.0 API'
+-linkoffline
+'https://docs.oracle.com/en/java/javase/11/docs/api' '/Users/chiararigante/Downloads/ProgettoBlackFriendly/TextAdventure2/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'Murder In The Castle 1.0 API'
+BlackFriendly.adventure
+BlackFriendly.adventure
+BlackFriendly.adventure
+BlackFriendly.adventure
+BlackFriendly.parser
+BlackFriendly.parser
+BlackFriendly.parser
+BlackFriendly.type
+BlackFriendly.type
+BlackFriendly.type
+BlackFriendly.type
+BlackFriendly.type
+BlackFriendly.type
+BlackFriendly.type
+BlackFriendly.games
+BlackFriendly.games
+/Users/chiararigante/Downloads/ProgettoBlackFriendly/TextAdventure2/src/main/java = 1604856500000
+/Users/chiararigante/Downloads/ProgettoBlackFriendly/TextAdventure2/target/site/apidocs/constant-values.html = 1604930274934
+/Users/chiararigante/Downloads/ProgettoBlackFriendly/TextAdventure2/target/site/apidocs/member-search-index.zip = 1604930275181
+/Users/chiararigante/Downloads/ProgettoBlackFriendly/TextAdventure2/target/site/apidocs/overview-tree.html = 1604930275065
+/Users/chiararigante/Downloads/ProgettoBlackFriendly/TextAdventure2/target/site/apidocs/index.html = 1604930275265
+/Users/chiararigante/Downloads/ProgettoBlackFriendly/TextAdventure2/target/site/apidocs/package-search-index.js = 1604930275128
+/Users/chiararigante/Downloads/ProgettoBlackFriendly/TextAdventure2/target/site/apidocs/package-search-index.zip = 1604930275173
+/Users/chiararigante/Downloads/ProgettoBlackFriendly/TextAdventure2/target/site/apidocs/type-search-index.zip = 1604930275177
+/Users/chiararigante/Downloads/ProgettoBlackFriendly/TextAdventure2/target/site/apidocs/index-all.html = 1604930275185
+/Users/chiararigante/Downloads/ProgettoBlackFriendly/TextAdventure2/target/site/apidocs/allpackages-index.html = 1604930275227
+/Users/chiararigante/Downloads/ProgettoBlackFriendly/TextAdventure2/target/site/apidocs/deprecated-list.html = 1604930275240
+/Users/chiararigante/Downloads/ProgettoBlackFriendly/TextAdventure2/target/site/apidocs/member-search-index.js = 1604930275179
+/Users/chiararigante/Downloads/ProgettoBlackFriendly/TextAdventure2/target/site/apidocs/allclasses.html = 1604930275257
+/Users/chiararigante/Downloads/ProgettoBlackFriendly/TextAdventure2/target/site/apidocs/script.js = 1604930275277
+/Users/chiararigante/Downloads/ProgettoBlackFriendly/TextAdventure2/target/site/apidocs/stylesheet.css = 1604930275275
+/Users/chiararigante/Downloads/ProgettoBlackFriendly/TextAdventure2/target/site/apidocs/overview-summary.html = 1604930275267
+/Users/chiararigante/Downloads/ProgettoBlackFriendly/TextAdventure2/target/site/apidocs/help-doc.html = 1604930275272
+/Users/chiararigante/Downloads/ProgettoBlackFriendly/TextAdventure2/target/site/apidocs/element-list = 1604930274876
+/Users/chiararigante/Downloads/ProgettoBlackFriendly/TextAdventure2/target/site/apidocs/allclasses-index.html = 1604930275224
+/Users/chiararigante/Downloads/ProgettoBlackFriendly/TextAdventure2/target/site/apidocs/type-search-index.js = 1604930275174
+/Users/chiararigante/Downloads/ProgettoBlackFriendly/TextAdventure2/target/site/apidocs/search.js = 1604930275278

@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"BlackFriendly.adventure"},{"l":"BlackFriendly.games"},{"l":"BlackFriendly.parser"},{"l":"BlackFriendly.type"}]
