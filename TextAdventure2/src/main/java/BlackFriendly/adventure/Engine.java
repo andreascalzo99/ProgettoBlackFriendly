@@ -16,7 +16,7 @@ import java.util.Scanner;
 /**
  * L'Engine contiene il main e il metodo run che serve a gestire il caricamento dell'entità del gioco.<br>
  * Contiene un metodo per chiudere il gioco.<br>
- * Si occupa della gestione delle risposte ai comandi iseriti dall'utente.
+ * Si occupa della gestione delle risposte ai comandi inseriti dall'utente.
  *
  * @author Rigante Chiara
  * @author Scalzo Andrea

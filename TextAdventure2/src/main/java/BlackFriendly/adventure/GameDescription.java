@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * GameDescription contiene le entità del gioco
+ * GameDescription è una classe astratta che contiene i metodi astratti per la gestione dei comandi e le strutture dati di contengono le stanze, i comandi e l'inventario.
  * @author Rigante Chiara
  * @author Ramkalawon Alessia
  * @author Scalzo Andrea

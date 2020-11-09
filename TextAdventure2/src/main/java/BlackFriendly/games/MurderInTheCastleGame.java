@@ -17,7 +17,7 @@ import java.io.PrintStream;
 import java.util.Iterator;
 
 /**
- * Murder in the Castle contiene contiene l'implementazione dei comandi e delle direzioni possibili all'utente.<br>
+ * Murder in the Castle contiene l'implementazione dei comandi e delle direzioni possibili all'utente.<br>
  * E' la classe che implementa la logica di gioco e come interagiscono i comandi dell'utente con il gioco.<br>
  * Estende la classe GameDescription e ne implementa i suoi metodi astratti.
  * @author Rigante Chiara
@@ -250,6 +250,12 @@ public class MurderInTheCastleGame extends GameDescription {
                             if (getCurrentRoom().getId() == 9) {
                                 art.writeBook();
                             }
+                            else if (getCurrentRoom().getId() == 3) {
+                                art.writeTrash();
+                            }
+                            else if (getCurrentRoom().getId() == 8) {
+                                art.writeWardrobe();
+                            }
 
                         } else {
                             out.println("Non c'è niente di interessante qui.");
@@ -261,12 +267,31 @@ public class MurderInTheCastleGame extends GameDescription {
                                 getInventory().add(p.getObject());
                                 getCurrentRoom().getObjects().remove(p.getObject());
                                 out.println("Hai raccolto: " + p.getObject().getDescription());
-                                    if (p.getObject().getId() == 1) {
+                                switch (p.getObject().getId()) {
+                                    case 1:
                                         art.writeScisors();
-                                    }
-                                    else if (p.getObject().getId() == 5){
+                                        break;
+                                    case 3:
+                                        art.writeTissue();
+                                        break;
+                                    case 4:
+                                        art.writeWires();
+                                        break;
+                                    case 5:
                                         art.writeMobile();
-                                    }
+                                        break;
+                                    case 7:
+                                        art.writeSkirt();
+                                        break;
+                                    case 9:
+                                        art.writeTailleur();
+                                        break;
+                                    case 10:
+                                        art.writeMegazine();
+                                        break;
+                                    default:
+                                        break;
+                                }
                                 contaOggetti++;
                                 p.getObject().setPickupable(false);//oggetto non più raccoglibile
                                 System.out.println(contaOggetti);
@@ -285,7 +310,7 @@ public class MurderInTheCastleGame extends GameDescription {
 
                                         } else {
                                             out.println("Risposta Sbagliata!");
-                                            if (contaOggetti == 6) {
+                                            if (contaOggetti == 7) {  //massimo oggetti raccoglibili
                                                 lose(out);
                                             }
                                         }
@@ -293,7 +318,7 @@ public class MurderInTheCastleGame extends GameDescription {
                                     case "no":
                                     case "No":
                                     case "NO":
-                                        if (contaOggetti == 6) {
+                                        if (contaOggetti == 7) {
                                             lose(out);
                                         } else {
                                             System.out.println("Continua a indagare!");

@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * Il parser si occupa di determinare la struttura e la correttezza dell’input analizzando i comandi e i potenziali oggetti inseriti nella frase eliminando le informazioni superflue.<br>
  * E' implementato in modo indipendete dalla lingua, in quanto implementato per riconoscere frasi semplici senza l'utilizzo di articoli o preposizioni.<br>
- * Verifica la correttezza dell'input inserito dall'utente, costuituito da uno o più parole, riferendosi ad un comando, oppure comando e oggetto.
+ * Verifica la correttezza dell'input inserito dall'utente, costituito da uno o più parole, riferendosi ad un comando, oppure comando e oggetto.
  * 
  * @author Rigante Chiara
  * @author Ramkalawon Alessia
