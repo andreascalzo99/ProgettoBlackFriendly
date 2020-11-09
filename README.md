@@ -8,6 +8,8 @@ La documentazione del gioco si trova all'interno della cartella /target/site/api
 Andrea Scalzo<br>
 Chiara Rigante<br>
 Alessia Ramkalawon<br>
-<html "file:///Users/chiararigante/Desktop/ProgettoBlackFriendly/TextAdventure2/target/site/apidocs/index.html">Documentazione</html>
 
+<head>
+  <link rel="documentazione" href="file:///Users/chiararigante/Desktop/ProgettoBlackFriendly/TextAdventure2/target/site/apidocs/index.html">
+</head>
 Enjoy!
