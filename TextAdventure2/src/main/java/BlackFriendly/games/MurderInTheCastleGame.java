@@ -91,8 +91,8 @@ public class MurderInTheCastleGame extends GameDescription {
         Room salaLettura = new Room(9, "Sala Lettura", "Ti trovi nella sala lettura del castello. Ci sono tomi di ogni genere, che ne diresti di leggere un libro?");
         salaLettura.setLook("Ma è il castello dei tavoli enormi? Un altro tavolo immenso fatto di legno massiccio, con attorno milioni di libri catalogati in diversi scaffali...\nFai attenzione! C'è categoria 'cucito'.  Qualcuno sarà veramente appassionato!\n Attento che un libro sporge, rimettilo bene prima che cada.");
         salaLettura.setVisible(false);
-        Room stanzaSegreta = new Room(10, "Stanza Segreta", "Non basta l'immensità del castello e il mistero che s'infittisce... Anche la stanza segreta!"); //INSERISCI FRASE AD EFFETTO
-        stanzaSegreta.setLook("Una stanza dall'aspetto abbastanza macabro, con una misera luce...\nMa.. ma.. c'è una gonna con delle iniziali 'M' & 'D' ed è pure sporca di sangue. Non sarà mica la gonna che mancava al tailleur?\nPrendila e inizia a ricomporre i pezzi!");
+        Room stanzaSegreta = new Room(10, "Stanza Segreta", "Non basta l'immensità del castello e il mistero che s'infittisce... Anche la stanza segreta!"); 
+        stanzaSegreta.setLook("Una stanza dall'aspetto abbastanza macabro, con una misera luce...\nMa.. ma.. c'è una gonna con delle iniziali 'M' & 'D' ed è pure sporca di sangue. \nPrendila e inizia a ricomporre i pezzi!");
         stanzaSegreta.setVisible(false);
         //maps 1st floor
         bagno.setSouth(salaDaPranzo);
@@ -294,7 +294,7 @@ public class MurderInTheCastleGame extends GameDescription {
                                 }
                                 contaOggetti++;
                                 p.getObject().setPickupable(false);//oggetto non più raccoglibile
-                                System.out.println(contaOggetti);
+                                
                                 java.util.Scanner scan = new java.util.Scanner(System.in);
                                 out.println("Hai capito chi è il colpevole?");
 
