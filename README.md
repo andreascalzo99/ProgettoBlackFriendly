@@ -1,4 +1,4 @@
-# ProgettoBlackFriendly
+# Progetto BlackFriendly
 Progetto esame Metodi Avanzati di Programmazione
 
 🗡 Murder In The Castle 🏰
